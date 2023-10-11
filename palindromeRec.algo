@@ -1,0 +1,23 @@
+FUNCTION palindromeRec( ph: string ,d,f :intger) : BOOLEAN
+VAR
+    res : BOOLEAN ;      // declation du variable
+
+
+
+BEGIN
+
+    IF (ph[d]<>ph[f] ) THEN
+    write('le mot n''est  pas palindrome');     // si le mot n'est pas palindrome
+      
+      Else
+        IF (d=f) THEN //cas d'arret
+            write('le mot est plaindrome');
+        Else
+            res := palindromeRec(ph,d+1,f-1);    //repele de la founction lui meme
+        END_IF
+
+       
+    END_IF
+
+    RETURN res; 
+END
